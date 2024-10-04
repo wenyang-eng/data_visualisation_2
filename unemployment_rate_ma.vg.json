@@ -5,7 +5,7 @@
   "fontSize": 24,  
   "fontWeight": "bold", 
   "font": "Time News Roman", 
-  "anchor": "middle"},
+  "anchor": "start"},
   "width": 1000,
   "height": 400,
   "projection": {"type": "equirectangular"},
