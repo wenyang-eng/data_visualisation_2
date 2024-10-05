@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Average Unemployment Rate in Malaysia by State",
+    "text": "Average Unemployment Rate in Malaysia by State (2023)",
     "fontSize": 24,
     "fontWeight": "bold",
     "font": "Times New Roman",
@@ -22,22 +22,7 @@
           "url": "lfs_qtr_state.csv"
         },
         "key": "state",
-        "fields": ["avg_u_rate", "year"]
-      }
-    },
-    {
-      "filter": "datum['year'] == selected_year"
-    }
-  ],
-  "params": [
-    {
-      "name": "selected_year",
-      "value": 2023,
-      "bind": {
-        "input": "select",
-        "options": [2022, 2023],
-        "labels": ["2022", "2023"],
-        "name": "Select Year: "
+        "fields": ["avg_u_rate"]
       }
     }
   ],
