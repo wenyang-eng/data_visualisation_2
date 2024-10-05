@@ -4,7 +4,7 @@
     "text": "Labor Force Distribution in Malaysia by Category (2010-2023)",
     "fontSize": 24,
     "fontWeight": "bold",
-    "font": "Time News Roman",
+    "font": "Times New Roman",
     "anchor": "start"
   },
   "data": {"url": "lfs_qtr.csv"},
@@ -24,7 +24,7 @@
     "header": {
       "title": null,
       "labelFontSize": 14,
-      "labelFont":"Times News Roman",
+      "labelFont": "Times New Roman",
       "labelFontWeight": "bold",
       "labelPadding": 10
     }
