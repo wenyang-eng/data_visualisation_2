@@ -47,7 +47,7 @@
     },
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "State"},
-      {"field": "avg_u_rate", "type": "quantitative", "title": "Average Unemployment Rate (%)"}
+      {"field": "avg_u_rate", "type": "quantitative", "title": "Average Unemployment Rate (%)", "format":".2f"}
     ]
   }
 }
