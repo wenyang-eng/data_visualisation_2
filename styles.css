@@ -56,3 +56,29 @@
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.stream-and-isotype-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#stream_graph, #isotype_container {
+    flex: 1;
+}
+
+#isotype_containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#isotype_age, #text2 {
+    flex: 1;
+}
+
+#text2{
+    font-size: 13px;  
+    font-family: Arial, Helvetica, sans-serif;
+}
