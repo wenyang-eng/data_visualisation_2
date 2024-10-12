@@ -1,14 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Parallel coordinate plot for Malaysian States with Population (in thousands), GDP growth, Participation Rate (%), and Unemployment Rate (%).",
-  "title": {
-    "text": "Relationships between Demographics, GDP, and Employment in Malaysia (2023)",
-    "fontSize": 24,
-    "fontWeight": "bold",
-    "font": "Times New Roman",
-    "anchor": "start",
-    "dy": -20
-  },
   "data": {
     "values": [
       {"State":"Johor","Population (in thousands)":4107.2,"GDP Annual Growth (%)":4.099,"Participation Rate (%)":70.35,"Unemployment Rate (%)":2.45},
@@ -29,8 +21,8 @@
       {"State":"Putrajaya","Population (in thousands)":118.8,"GDP Annual Growth (%)":3.803,"Participation Rate (%)":75.825,"Unemployment Rate (%)":0.825}
     ]
   },
-  "width": 800,
-  "height": 440,
+  "width": 900,
+  "height": 320,
   "transform": [
     {"window": [{"op": "count", "as": "index"}]},
     {"fold": ["Population (in thousands)", "GDP Annual Growth (%)", "Participation Rate (%)", "Unemployment Rate (%)"]},
@@ -71,7 +63,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Pulau Pinang", "Perak", "Perlis", "Selangor", "Terengganu", "Sabah", "Sarawak", "Kuala Lumpur", "Labuan", "Putrajaya"],
-            "range": [ "#86C1DC", "#4682B4", "#000080", "#7FFFD4", "#5F9EA0", "#2E8B57", "#DAA520", "#808000", "#FFD700", "#FFA500", "#8B4513", "#C71585", "#6A5ACD", "#9932CC", "#6E7571", "#FF69B4"]
+            "range": [ "#86C1DC", "#4682B4", "#000080", "#7FFFD4", "#a45757", "#2E8B57", "#DAA520", "#808000", "#f000ff", "#FFA500", "#8B4513", "#C71585", "#6A5ACD", "#9932CC", "#965093", "#fdabab"]
           }
         },
         "detail": {"type": "nominal", "field": "index"},
@@ -103,7 +95,7 @@
           }
         },
         {
-          "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+          "mark": {"type": "tick", "style": "tick", "size": 15, "color": "#ccc"}
         }
       ]
     },
@@ -116,11 +108,11 @@
         {
           "mark": {"type": "text", "style": "label", "fontWeight":"bold"},
           "encoding": {
-            "text": {"aggregate": "min", "field": "mid", "format": ".2f"}
+            "text": {"aggregate": "min", "field": "mid", "format": ",.2f"}
           }
         },
         {
-          "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+          "mark": {"type": "tick", "style": "tick", "size": 15, "color": "#ccc"}
         }
       ]
     },
@@ -137,22 +129,24 @@
           }
         },
         {
-          "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+          "mark": {"type": "tick", "style": "tick", "size": 15, "color": "#ccc"}
         }
       ]
     }
   ],
   "config": {
-    "axisX": {"domain": false, "labelAngle": 0, "tickColor": "#ccc", "title": null},
+    "axisX": {"domain": false, "labelAngle": 0, "tickColor": "#ccc", "title": null, "labelFontSize": 15},
     "view": {"stroke": null},
     "style": {
-      "label": {"baseline": "middle", "align": "right", "dx": -5},
+      "label": {"baseline": "middle", "align": "right", "dx": -5, "fontSize": 15},
       "tick": {"orient": "horizontal"}
     },
     "legend": {
       "symbolType": "square",
       "strokeWidth": 2,
-      "symbolOpacity": 0.8
+      "symbolOpacity": 0.8,
+      "labelFontSize": 15,
+      "titleFontSize": 15
     }
   }
 }

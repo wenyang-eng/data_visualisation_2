@@ -1,12 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Labor Force Distribution in Malaysia by Category (2010-2023)",
-    "fontSize": 24,
-    "fontWeight": "bold",
-    "font": "Times New Roman",
-    "anchor": "start"
-  },
   "data": {"url": "lfs_qtr.csv"},
   "transform": [
     {
@@ -23,14 +16,14 @@
     "type": "nominal",
     "header": {
       "title": null,
-      "labelFontSize": 14,
+      "labelFontSize": 18,
       "labelFont": "Times New Roman",
       "labelFontWeight": "bold",
       "labelPadding": 10
     }
   },
   "spec": {
-    "width": 450,
+    "width": 420,
     "layer": [
       {
         "mark": {"type": "bar"},
@@ -39,19 +32,31 @@
             "field": "Year",
             "type": "ordinal",
             "title": "Year",
-            "axis": {"labelAngle": 0}
+            "axis": {
+              "labelAngle": 0,
+              "labelFontSize": 14,
+              "titleFontSize": 16
+            }
           },
           "x": {
             "field": "Labor Force Value",
             "type": "quantitative",
-            "title": "Number of People (in Thousands)"
+            "title": "Number of People (in Thousands)",
+            "axis": {
+              "labelFontSize": 14,
+              "titleFontSize": 16
+            }
           },
           "color": {
-            "field": "colorCategory",
+            "condition": {
+              "test": "datum.colorCategory == 'highlight'",
+              "value": "tomato"
+            },
+            "field": "Labor Force Category",
             "type": "nominal",
             "scale": {
-              "domain": ["normal", "highlight"],
-              "range": ["#c4c3c2", "#ff6848"]
+              "domain": ["Employed", "Unemployed", "Outside Labor"],
+              "range": ["#cefcff", "#d9d9d5", "#e5ceff"]
             },
             "legend": null
           },
@@ -72,7 +77,7 @@
           "align": "left",
           "dx": 5,
           "dy": -5,
-          "fontSize": 13
+          "fontSize": 15
         },
         "encoding": {
           "text": {"value": "COVID-19 causes increases in unemployment in 2020-2021."},
